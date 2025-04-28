@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
-import Navbar from '../components/navbar';
-import HeroSection from '../components/herosection';
-import AboutUs from '../components/aboutus';
-import Classes from '../components/classes';
-import Testimonials from '../components/testimonials';
-import FAQ from '../components/faq';
-import Footer from '../components/footer';
-import Contact from '../components/contact';
-import Pricing from '../components/pricing';
+import HeroSection from '../sections/herosection';
+import AboutUs from '../sections/aboutus';
+import Classes from '../sections/classes';
+import Testimonials from '../sections/testimonials';
+import {FAQ, Slider, Slider2} from '../sections/faq';
+import Footer from '../sections/footer';
+import Contact from '../sections/contact';
+import Pricing from '../sections/pricing';
 export default class Home extends Component {
   render() {
     return (
-      <>
-          <Navbar/>
+      <main className='relative min-h-screen w-screen overflow-x-hidden'>
+          
           <HeroSection/>
           <AboutUs/>
+          <Slider/>
           <Classes/>
           <Pricing/>
           <Testimonials/>
           <FAQ/>
           <Contact/>
+          <Slider2/>
           <Footer/>
-      </>
+        </main>
     )
   }
 }

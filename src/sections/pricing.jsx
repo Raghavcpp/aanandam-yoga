@@ -10,8 +10,8 @@ const Pricing = () => {
     return (
         <section id="pricing" className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <h2 className="text-4xl font-bold text-green-700">
-                    Membership <span className="text-orange-500">Plans</span>
+                <h2 className="text-4xl font-bold text-black">
+                    Membership <span className="text-black">Plans</span>
                 </h2>
                 <p className="text-lg text-gray-700 mt-4">
                     Choose the perfect plan for your yoga journey.
@@ -42,7 +42,7 @@ const Pricing = () => {
                             <div className="flex px-6 pb-8 sm:px-8">
                                 <a
                                     aria-describedby="tier-company"
-                                    className="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+                                    className="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
                                     href="#"
                                 >
                                     Get Started

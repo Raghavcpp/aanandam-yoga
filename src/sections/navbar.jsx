@@ -7,13 +7,13 @@ const navigation = [
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ]
-const Navbar = () => {
+const Navbar = ({ setIsOpen }) => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        <a href="#" className="text-green-700 text-2xl font-bold flex items-center gap-2">
+        <a href="#" className="text-black text-2xl font-bold flex items-center gap-2">
           <img src={logo} alt="Logo" className="h-12"/> Aanandam Yoga
         </a>
 
@@ -27,9 +27,9 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <a href="#join" className="hidden md:block bg-orange-400 text-white px-6 py-2 rounded-full hover:bg-orange-500 transition shadow-lg">
-          Join Now
-        </a>
+        <button
+        className="bg-green-600 text-white rounded px-4 py-1"
+        onClick={() => setIsOpen(true)}>open</button>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
