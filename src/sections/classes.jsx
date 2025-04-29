@@ -12,40 +12,70 @@ const Classes = () => {
 
           {/* Vayayam / Pranayam */}
           <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
-            <img src="/images/h2-event-img1.png" alt="h2-event-img1" className=" h-auto mb-3" />
+            <div className="overflow-hidden">
+              <img src="/images/h2-event-img1.png" alt="h2-event-img1" className="transition-transform duration-500 hover:scale-110 h-auto mb-3" />
+            </div>
             <h3 className="text-2xl font-semibold text-black">yayam / Pranayam</h3>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2 h-18">
               Breathe deeply and rejuvenate your body with guided Pranayam techniques and light exercises.
             </p>
-            <button className="mt-4 btn btn-outline btn-success">Explore</button>
+            <div className="flex mt-2 px-6 pb-8 sm:px-8">
+              <a
+                  aria-describedby="tier-company"
+                  className="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+                  href="#"
+              >
+                  Explore
+              </a>
+            </div>
           </div>
 
           {/* Aasans for Medically Affected People */}
           <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
+            <div className="overflow-hidden rounded-t-full">
             <video
               src="/images/event-list-video.mp4"
-              className="rounded-t-full h-auto mb-3"
+              className="transition-transform duration-500 rounded-t-full hover:scale-110 h-auto mb-3"
               autoPlay
               loop
               muted
               playsInline
             />
+            </div>
             <h3 className="text-2xl font-semibold text-black">Aasans for Medical Needs</h3>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2 h-18">
               Special yoga for pregnant women, diabetic, and thyroid-affected individuals to improve health.
             </p>
-            <button className="mt-4 btn btn-outline btn-success">Explore</button>
+            <div className="flex mt-2 px-6 pb-8 sm:px-8">
+              <a
+                  aria-describedby="tier-company"
+                  className="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+                  href="#"
+              >
+                  Explore
+              </a>
+            </div>
           </div>
 
 
           {/* Aasans with Equipment or Props */}
           <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
-            <img src="/images/h2-event-img3.png" alt="h2-event-img3" className=" h-auto mb-3" />
+            <div className="overflow-hidden">
+              <img src="/images/h2-event-img3.png" alt="h2-event-img3" className="transition-transform duration-500 hover:scale-110 h-auto mb-3" />
+            </div>
             <h3 className="text-2xl font-semibold text-black">Aasans with Equipment</h3>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2 h-18">
               Enhance flexibility and support with yoga props like blocks, straps, and bolsters.
             </p>
-            <button className="mt-4 btn btn-outline btn-success">Explore</button>
+            <div className="flex mt-2 px-6 pb-8 sm:px-8">
+              <a
+                  aria-describedby="tier-company"
+                  className="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+                  href="#"
+              >
+                  Explore
+              </a>
+            </div>
           </div>
 
         </div>
