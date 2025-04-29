@@ -4,7 +4,7 @@ const Classes = () => {
   return (
     <section id="classes" className="py-16 ">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-black">Our <span className="text-black">Yoga Classes</span></h2>
+        <h2 className="text-4xl font-display font-bold text-black">Our <span className="text-black">Yoga Classes</span></h2>
         <p className="text-lg text-gray-700 mt-4">Explore our specialized yoga sessions tailored for different needs.</p>
 
         {/* Classes Grid */}

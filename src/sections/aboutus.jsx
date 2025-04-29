@@ -18,7 +18,7 @@ const AboutUs = () => {
 
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-black">About <span className="text-black">Aanandam Yoga</span></h2>
+          <h2 className="text-4xl font-display font-bold text-black">About <span className="text-black">Aanandam Yoga</span></h2>
           <p className="text-lg text-gray-700 mt-4">
             At Aanandam Yoga, we believe in the power of yoga to transform lives. Our expert instructors guide students of all levels, helping them find balance, strength, and peace. 
           </p>

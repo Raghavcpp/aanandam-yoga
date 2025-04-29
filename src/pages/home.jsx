@@ -19,8 +19,8 @@ export default class Home extends Component {
           <Pricing/>
           <Testimonials/>
           <FAQ/>
-          <Contact/>
           <Slider2/>
+          <Contact/>
           <Footer/>
         </main>
     )

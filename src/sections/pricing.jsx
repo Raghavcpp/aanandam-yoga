@@ -1,16 +1,11 @@
 import React from "react";
-
-const plan = [
-    { name: "Basic", tagline: "Suitable for normal flexibility.", price: "$25" },
-    { name: "Standard", tagline: "Suitable to grow steadily.", price: "$40" },
-    { name: "Premium", tagline: "Suitable for core concepts.", price: "$50" },
-];
+import {plan} from "../assets/constants"
 
 const Pricing = () => {
     return (
-        <section id="pricing" className="py-16 bg-white">
+        <section id="pricing" className="py-16 bg-[#F7EDE4]">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <h2 className="text-4xl font-bold text-black">
+                <h2 className="text-4xl font-display font-bold text-black">
                     Membership <span className="text-black">Plans</span>
                 </h2>
                 <p className="text-lg text-gray-700 mt-4">

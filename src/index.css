@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #F6EDE4;
+    background-color: #F7EDE4;
 }
 @theme {
     --font-display: "Italiana", "sans-serif"; 
@@ -23,19 +23,28 @@ body {
     display: inline-flex;
     opacity: 0;
     transform: translateY(100%);
-    animation: popUpAppear .35s ease-out forwards;
+    animation: popUpAppear .55s ease-out forwards;
 }
 
-
-[class^="number-slide"],
-[class*=" number-slide"] {
-  background: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 500;
-  height: 300px;
-  max-height: 100vh;
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #0c0513;
+  background-image: url(./assets/infinite-spinner.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+

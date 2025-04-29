@@ -37,9 +37,9 @@ const Testimonial = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 bg-gradient-to-br from-green-100 via-yellow-50 to-blue-100">
+    <section id="testimonials" className="py-16 bg-[#F7EDE4]">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-black">
+        <h2 className="text-4xl font-display font-bold text-black">
           What Our <span className="text-black">Clients Say</span>
         </h2>
         <p className="text-lg text-gray-700 mt-4">Real stories from our happy members.</p>
@@ -47,7 +47,7 @@ const Testimonials = () => {
         <div className="mt-12 grid md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
           {Testimonial.map((t, index) => (
             <StyledWrapper key={index}>
-              <div className="card">
+              <div className="card h-50">
                 <div className="header">
                 <img src={imageMap[t.image]} alt={t.name} className="image" />
 

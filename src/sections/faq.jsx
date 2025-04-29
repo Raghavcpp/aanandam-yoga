@@ -4,9 +4,9 @@ import "keen-slider/keen-slider.min.css"
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-16 bg-gradient-to-br from-green-100 to-yellow-50">
+    <section id="faq" className="py-16 ">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-black text-center">Frequently <span className="text-black">Asked Questions</span></h2>
+        <h2 className="text-4xl font-display font-bold text-black text-center">Frequently <span className="text-black">Asked Questions</span></h2>
 
         {/* FAQ List */}
         <div className="mt-8 space-y-6">
@@ -72,12 +72,18 @@ const Slider = () => {
   return (
     <>
     <div className="flex center">
-      
+
     </div>
       <div ref={sliderRef} className="keen-slider">
-        <img src="/images/h2-gallery1.jpg" alt="h2-gallery1" className="keen-slider__slide  max-h-116"/>
-        <img src="/images/h2-gallery2.jpg" alt="h2-gallery2" className="keen-slider__slide  max-h-116"/>
-        <img src="/images/h2-gallery3.jpg" alt="h2-gallery3" className="keen-slider__slide  max-h-116"/>
+        <div className="keen-slider__slide overflow-hidden max-h-116">
+          <img src="/images/h2-gallery1.jpg" alt="h2-gallery1" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
+        </div>
+        <div className="keen-slider__slide overflow-hidden max-h-116">
+          <img src="/images/h2-gallery2.jpg" alt="h2-gallery2" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
+        </div>
+        <div className="keen-slider__slide overflow-hidden max-h-116">
+          <img src="/images/h2-gallery3.jpg" alt="h2-gallery3" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
+        </div>
       </div>
     </>
   )
@@ -91,6 +97,14 @@ const Slider2 = () => {
         origin: "center",
         perView: 5,
         spacing: 60,
+      },
+      breakpoints: {
+        "(max-width: 768px)": {  // md: 768px and below
+          slides: {
+            perView: 3,
+            spacing: 20,
+          },
+        },
       },
     },
     [
@@ -128,11 +142,21 @@ const Slider2 = () => {
   return (
     <>
       <div ref={sliderRef} className="keen-slider">
-        <img src="/images/h2-insta-img1.jpg" alt="h2-insta-img1" className="keen-slider__slide number-slide1 max-h-71"/>
-        <img src="/images/h2-insta-img2.jpg" alt="h2-insta-img2" className="keen-slider__slide number-slide1 max-h-71"/>
-        <img src="/images/h2-insta-img3.jpg" alt="h2-insta-img3" className="keen-slider__slide number-slide1 max-h-71"/>
-        <img src="/images/h2-insta-img4.jpg" alt="h2-insta-img4" className="keen-slider__slide number-slide1 max-h-71"/>
-        <img src="/images/h2-insta-img5.jpg" alt="h2-insta-img5" className="keen-slider__slide number-slide1 max-h-71"/>
+        <div className="keen-slider__slide max-h-71">
+          <img src="/images/h2-insta-img1.jpg" alt="h2-insta-img1" className="transition-transform duration-500 hover:scale-110 max-h-71"/>
+        </div>
+        <div className="keen-slider__slide max-h-71">
+          <img src="/images/h2-insta-img2.jpg" alt="h2-insta-img2" className="transition-transform duration-500 hover:scale-110 max-h-71"/>
+        </div>
+        <div className="keen-slider__slide max-h-71">
+          <img src="/images/h2-insta-img3.jpg" alt="h2-insta-img3" className="transition-transform duration-500 hover:scale-110 max-h-71"/>
+        </div>
+        <div className="keen-slider__slide max-h-71">
+          <img src="/images/h2-insta-img4.jpg" alt="h2-insta-img4" className="transition-transform duration-500 hover:scale-110 max-h-71"/>
+        </div>
+        <div className="keen-slider__slide max-h-71">
+          <img src="/images/h2-insta-img5.jpg" alt="h2-insta-img5" className="transition-transform duration-500 hover:scale-110 max-h-71"/>
+        </div>
       </div>
     </>
   )
