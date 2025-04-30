@@ -1,39 +1,7 @@
 // src/components/Testimonials.js
 import React from 'react';
 import styled from 'styled-components';
-
-import testimonialPic1 from '../assets/testimonials/testimonialPic1.png';
-
-const imageMap = {
-    "testimonialPic1.png": testimonialPic1,
-};  
-
-const Testimonial = [
-  {
-    name: "Alice",
-    image: "testimonialPic1.png",
-    comment: "Amazing flexibility and peaceful sessions. I feel recharged every day.",
-    star: 4
-  },
-  {
-    name: "Bob",
-    image: "testimonialPic1.png",
-    comment: "A life-changing experience with skilled trainers.",
-    star: 5
-  },
-  {
-    name: "Charlie",
-    image: "testimonialPic1.png",
-    comment: "I joined casually, but now I’m addicted to the calm.",
-    star: 3
-  },
-  {
-    name: "Diana",
-    image: "testimonialPic1.png",
-    comment: "The instructors are kind and the environment is relaxing.",
-    star: 2
-  },
-];
+import {Testimonial} from '../assets/constants'
 
 const Testimonials = () => {
   return (
@@ -49,7 +17,7 @@ const Testimonials = () => {
             <StyledWrapper key={index}>
               <div className="card h-50">
                 <div className="header">
-                <img src={imageMap[t.image]} alt={t.name} className="image" />
+                <img src={`/images/testimonials/${t.image}`} alt={t.name} className="image" />
 
                   <div>
                     <div className="stars">
