@@ -38,12 +38,12 @@ const HeroSection = () => {
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <Card />
       </Drawer>
-      <div className="grade bg-linear-to-b from-[#FAFAFA] to-[#F7EDE4] h-30"></div>
-      <div className="relative flex flex-row flex-wrap justify-evenly text-center px-6 w-screen">
-        <img src="images/h2-img1.png" alt="h2-img1.png" className="rounded-tl-full h-100" />
-        <img src="images/h2-img2.png" alt="h2-img2.png" className="rounded-t-full h-100" />
-        <img src="images/h2-img3.png" alt="h2-img3.png" className="rounded-t-full h-100" />
-        <img src="images/h2-img4.png" alt="h2-img4.png" className="rounded-tr-full h-100" />
+      <div className="grade bg-linear-to-b from-[#FAFAFA] to-[#F7EDE4] h-10 md:h-30"></div>
+      <div className="relative flex center flex-row flex-wrap justify-evenly text-center w-screen">
+        <img src="images/h2-img1.png" alt="h2-img1.png" className="rounded-tl-full max-h-100" />
+        <img src="images/h2-img2.png" alt="h2-img2.png" className="rounded-t-full max-h-100" />
+        <img src="images/h2-img3.png" alt="h2-img3.png" className="rounded-t-full max-h-100" />
+        <img src="images/h2-img4.png" alt="h2-img4.png" className="rounded-tr-full max-h-100" />
       </div>
     </>
   );
