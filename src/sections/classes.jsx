@@ -11,7 +11,7 @@ const Classes = () => {
         <div className="mt-12 grid md:grid-cols-3 gap-8">
 
           {/* Vayayam / Pranayam */}
-          <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
+          <div data-aos="fade-up-right" className="bg-white p-6 rounded-xl shadow-lg border-t-4">
             <div className="overflow-hidden">
               <img src="/images/h2-event-img1.png" alt="h2-event-img1" className="transition-transform duration-500 hover:scale-110 h-auto mb-3" />
             </div>
@@ -31,11 +31,11 @@ const Classes = () => {
           </div>
 
           {/* Aasans for Medically Affected People */}
-          <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
-            <div className="overflow-hidden rounded-t-full">
+          <div data-aos="fade-up-right" className="center bg-white p-6 rounded-xl shadow-lg border-t-4">
+            <div className=" overflow-hidden rounded-t-full">
             <video
               src="/images/event-list-video.mp4"
-              className="transition-transform duration-500 rounded-t-full hover:scale-110 h-auto mb-3"
+              className="transition-transform duration-500 rounded-t-full hover:scale-110 w-full h-auto mb-3"
               autoPlay
               loop
               muted
@@ -59,7 +59,7 @@ const Classes = () => {
 
 
           {/* Aasans with Equipment or Props */}
-          <div className="bg-white p-6 rounded-xl shadow-lg border-t-4">
+          <div data-aos="fade-up-left" className="bg-white p-6 rounded-xl shadow-lg border-t-4">
             <div className="overflow-hidden">
               <img src="/images/h2-event-img3.png" alt="h2-event-img3" className="transition-transform duration-500 hover:scale-110 h-auto mb-3" />
             </div>

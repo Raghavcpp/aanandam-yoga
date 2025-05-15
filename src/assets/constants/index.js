@@ -12,6 +12,7 @@ const imgpath = [
     "h2-showcase-img3.png",
     "h2-showcase-img4.png",
     "h2-showcase-img5.png",
+    "h2-showcase-img6.png"
 ]
 const plan = [
     { name: "Basic", tagline: "Suitable for normal flexibility.", price: "$25" },

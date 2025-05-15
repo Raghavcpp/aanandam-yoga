@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "ghost":"vite --host",
+    "ghost": "vite --host",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.17",
+    "aos": "^2.3.4",
     "daisyui": "^5.0.9",
     "keen-slider": "^6.8.6",
     "react": "^19.0.0",

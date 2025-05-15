@@ -7,11 +7,11 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
         {/* Instructor Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div data-aos="flip-left" data-aos-delay="300" data-aos-duration="3000" className="w-full md:w-1/2 flex justify-center">
           <img
             src={instructorImage}
             alt="Yoga Instructor"
-            className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-black [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)]"
+            className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-black"
           />
         </div>
 

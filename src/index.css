@@ -2,28 +2,28 @@
 
 
 body {
-    background-color: #F7EDE4;
-}
-@theme {
-    --font-display: "Italiana", "sans-serif"; 
+  background-color: #F7EDE4;
 }
 
-@keyframes popUpAppear {
+@theme {
+  --font-display: "Italiana", "sans-serif";
+  --animate-pop-up-appear: pop-up-appear 0.55s ease-out forwards;
+  
+  @keyframes pop-up-appear {
     0% {
       opacity: 0;
-      transform: translateY(100%);
+      transform: scale(0.9) translateY(100%);
     }
     100% {
       opacity: 1;
-      transform: translateY(0%);
+      transform: scale(1) translateY(0%);
     }
+  }
 }
 
 .has-appear {
-    display: inline-flex;
-    opacity: 0;
-    transform: translateY(100%);
-    animation: popUpAppear .55s ease-out forwards;
+    @apply inline-flex opacity-1 animate-[var(--animate-pop-up-appear)];
+
 }
 
 #preloader {
@@ -47,4 +47,3 @@ body {
   overflow: hidden;
   height: 100vh;
 }
-
