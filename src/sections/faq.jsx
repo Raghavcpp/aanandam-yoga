@@ -1,7 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import Lightbox from "yet-another-react-lightbox"
+import "yet-another-react-lightbox/styles.css"
 
+const images = [
+  "/images/client_1.jpg",
+  "/images/client_2.jpg",
+  "/images/client_3.jpg",
+]
 const FAQ = () => {
   return (
     <section id="faq" className="py-16 ">
@@ -27,15 +34,14 @@ const FAQ = () => {
 
 
 const Slider = () => {
-  const [sliderRef] = useKeenSlider(
-    {
-      loop: true,
+  const [sliderRef] = useKeenSlider({
+    loop: true,
       breakpoints: {
         "(min-width: 1024px)": {
           slides: { perView: 3, spacing: 24 },
         },
         "(min-width: 768px)": {
-          slides: { perView: 2, spacing: 20 },
+          slides: { perView: 3, spacing: 20 },
         },
         "(max-width: 767px)": {
           slides: { perView: 1, spacing: 16 },
@@ -80,29 +86,39 @@ const Slider = () => {
     ]
   )
 
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
   return (
-    <div className="w-full px-4">
-      <div
-        ref={sliderRef}
-        className="keen-slider
-          h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[32rem]"
-      >
-        {[1, 2, 3].map((id) => (
+    <>
+      <div ref={sliderRef} className="keen-slider h-64 sm:h-80 md:h-96">
+        {images.map((img, i) => (
           <div
-            key={id}
-            className="keen-slider__slide flex items-center justify-center overflow-hidden"
+            key={i}
+            className="keen-slider__slide flex items-center justify-center cursor-pointer"
+            onClick={() => {
+              setIndex(i);
+              setOpen(true);
+            }}
           >
-            <img
-              src={`/images/client_${id}.jpg`}
-              alt={`client_${id}`}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-            />
+            <img src={img} className="object-cover w-full h-full" />
           </div>
         ))}
       </div>
-    </div>
-  )
-}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={images.map((img) => ({ src: img }))}
+      />
+    </>
+  );
+};
+
+
+
 const Slider2 = () => {
   const [sliderRef] = useKeenSlider(
     {
