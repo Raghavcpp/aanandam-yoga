@@ -29,13 +29,24 @@ const FAQ = () => {
 const Slider = () => {
   const [sliderRef] = useKeenSlider(
     {
-      mode: "snap",
-      loop:true,
+      loop: true,
+      breakpoints: {
+        "(min-width: 1024px)": {
+          slides: { perView: 3, spacing: 24 },
+        },
+        "(min-width: 768px)": {
+          slides: { perView: 2, spacing: 20 },
+        },
+        "(max-width: 767px)": {
+          slides: { perView: 1, spacing: 16 },
+        },
+      },
       slides: {
         origin: "center",
-        perView: 2,
-        spacing: 20,
+        perView: 1,
+        spacing: 16,
       },
+      mode: "snap",
     },
     [
       (slider) => {
@@ -49,7 +60,7 @@ const Slider = () => {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 2000)
+          }, 3000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
@@ -70,22 +81,26 @@ const Slider = () => {
   )
 
   return (
-    <>
-    <div className="flex center">
-
-    </div>
-      <div ref={sliderRef} className="keen-slider">
-        <div className="keen-slider__slide overflow-hidden max-h-116">
-          <img src="/images/h2-gallery1.jpg" alt="h2-gallery1" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
-        </div>
-        <div className="keen-slider__slide overflow-hidden max-h-116">
-          <img src="/images/h2-gallery2.jpg" alt="h2-gallery2" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
-        </div>
-        <div className="keen-slider__slide overflow-hidden max-h-116">
-          <img src="/images/h2-gallery3.jpg" alt="h2-gallery3" className="transition-transform duration-500 hover:scale-110 max-h-116"/>
-        </div>
+    <div className="w-full px-4">
+      <div
+        ref={sliderRef}
+        className="keen-slider
+          h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[32rem]"
+      >
+        {[1, 2, 3].map((id) => (
+          <div
+            key={id}
+            className="keen-slider__slide flex items-center justify-center overflow-hidden"
+          >
+            <img
+              src={`/images/client_${id}.jpg`}
+              alt={`client_${id}`}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   )
 }
 const Slider2 = () => {
